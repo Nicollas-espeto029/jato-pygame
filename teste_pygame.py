@@ -10,8 +10,8 @@ ASSETS = BASE_DIR / "images"
 HIGH_SCORE_PATH = BASE_DIR / "highscore.txt"
 SFX_DIR = BASE_DIR / "SFX"
 SFX_VOLUME = 1.0
-BGM_VOLUME = 0.15
-BGM_FILE = SFX_DIR / "musica-do-chaves.mp3"
+BGM_VOLUME = 0.20
+BGM_FILE = SFX_DIR / "naruto-battle-theme.mp3"
 
 def init_audio():
     try:
@@ -26,7 +26,7 @@ def init_audio():
                 pygame.mixer.music.play(-1)
             except Exception:
                 pass
-        files = [p for p in sorted(SFX_DIR.glob("*.mp3")) if p.name.lower() != "musica-do-chaves.mp3"]
+        files = [p for p in sorted(SFX_DIR.glob("*.mp3")) if p.name.lower() != "naruto-battle-theme.mp3"]
         sounds = []
         for p in files:
             try:
